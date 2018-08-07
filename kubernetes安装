@@ -5,9 +5,7 @@ yum install etcd -y
 
 
 https://kubernetes.io/docs/imported/release/notes/
-在每台计算机上，安装Docker。建议使用版本17.03，但已知1.11,1.12和1.13也可以使用。版本17.06+ 可能有效，但尚未经过Kubernetes节点团队的测试和验证。在Kubernetes发行说明中跟
-
-踪最新验证的Docker版本。
+在每台计算机上，安装Docker。建议使用版本17.03，但已知1.11,1.12和1.13也可以使用。版本17.06+ 可能有效，但尚未经过Kubernetes节点团队的测试和验证。在Kubernetes发行说明中跟踪最新验证的Docker版本。
 
 
 使用阿里云下载安装指定版本docker
@@ -61,11 +59,7 @@ kubelet：在群集中的所有计算机上运行的组件，并执行诸如启�
 kubectl：命令行util与您的群集通信。
 
 
-kubeadm 不会安装或管理kubelet或kubectl为您安装，因此您需要确保它们与您希望kubeadm为您安装的Kubernetes控制面板的版本相匹配。如果不这样做，则存在版本偏差的风险，这可能导
-
-致意外的错误行为。但是，支持kubelet和控制平面之间的一个次要版本倾斜，但kubelet版本可能永远不会超过API服务器版本。例如，运行1.7.0的kubelet应该与1.8.0 API服务器完全兼容
-
-，但反之亦然。
+kubeadm 不会安装或管理kubelet或kubectl为您安装，因此您需要确保它们与您希望kubeadm为您安装的Kubernetes控制面板的版本相匹配。如果不这样做，则存在版本偏差的风险，这可能导致意外的错误行为。但是，支持kubelet和控制平面之间的一个次要版本倾斜，但kubelet版本可能永远不会超过API服务器版本。例如，运行1.7.0的kubelet应该与1.8.0 API服务器完全兼容，但反之亦然。
 
 
 cat <<EOF > /etc/yum.repos.d/kubernetes.repo
@@ -108,3 +102,15 @@ KUBELET_KUBEADM_EXTRA_ARGS=--cgroup-driver=<value>
 
 systemctl daemon-reload
 systemctl restart kubelet
+
+
+
+
+
+
+
+
+
+
+
+
