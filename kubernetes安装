@@ -1,4 +1,5 @@
-参考官方资料：https://kubernetes.io/docs/setup/independent/
+参考官方安装资料：https://kubernetes.io/docs/setup/independent/
+源码tar包下载：https://kubernetes.io/docs/imported/release/notes/
 
 yum install etcd -y
 
